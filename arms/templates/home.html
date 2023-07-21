@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="app-wrapper">
+	    
+    <div class="app-content pt-3 p-md-3 p-lg-4">
+        <div class="container-xl">    
+            <h1 class="app-page-title">Dashboard Overview</h1>
+            <div class="row g-4 mb-4">
+                <div class="col-6 col-lg-6 mx-auto">
+                    <div class="app-card app-card-stat shadow-lg h-100" style="background-color: aquamarine;">
+                        <div class="app-card-body p-3 p-lg-4">
+                            <h4 class="stats-type mb-1">Total Arms in RFMF</h4>
+                            <div class="stats-figure">{{ arm_count }}</div>    
+                        </div><!--//app-card-body-->
+                        <a class="app-card-link-mask" href="#"></a>
+                    </div><!--//app-card-->
+                </div>
+            </div>
+            <h5>Arm Type</h5>			    		    
+            <div class="row g-4 mb-4">
+                <div class="col-6 col-lg-3">
+                    <div class="app-card app-card-stat shadow-lg h-100" style="background-color: rgb(195, 255, 127);">
+                        <div class="app-card-body p-3 p-lg-4">
+                            <h4 class="stats-type mb-1">Total Revolver</h4>
+                            <div class="stats-figure">{{ total_revolver}}</div>    
+                        </div><!--//app-card-body-->
+                        <a class="app-card-link-mask" href="#"></a>
+                    </div><!--//app-card-->
+                </div><!--//col-->
+                
+                <div class="col-6 col-lg-3">
+                    <div class="app-card app-card-stat shadow-lg h-100">
+                        <div class="app-card-body p-3 p-lg-4" style="background-color: rgb(195, 255, 127);">
+                            <h4 class="stats-type mb-1">Total Pistol</h4>
+                            <div class="stats-figure">{{ total_pistol }}</div>				    
+                        </div><!--//app-card-body-->
+                        <a class="app-card-link-mask" href="#"></a>
+                    </div><!--//app-card-->
+                </div><!--//col-->
+                <div class="col-6 col-lg-3">
+                    <div class="app-card app-card-stat shadow-lg h-100" style="background-color: rgb(195, 255, 127);">
+                        <div class="app-card-body p-3 p-lg-4">
+                            <h4 class="stats-type mb-1">Total Holster</h4>
+                            <div class="stats-figure">{{ total_holster }}</div>
+                        </div><!--//app-card-body-->
+                        <a class="app-card-link-mask" href="#"></a>
+                    </div><!--//app-card-->
+                </div><!--//col-->
+                <div class="col-6 col-lg-3">
+                    <div class="app-card app-card-stat shadow-lg h-100" style="background-color: rgb(195, 255, 127);">
+                        <div class="app-card-body p-3 p-lg-4">
+                            <h4 class="stats-type mb-1">Total Machine Gun</h4>
+                            <div class="stats-figure">{{ total_machine_gun }}</div>
+                        </div><!--//app-card-body-->
+                        <a class="app-card-link-mask" href="#"></a>
+                    </div><!--//app-card-->
+                </div><!--//col-->
+                <div class="col-6 col-lg-3">
+                    <div class="app-card app-card-stat shadow-lg h-100" style="background-color: rgb(195, 255, 127);">
+                        <div class="app-card-body p-3 p-lg-4">
+                            <h4 class="stats-type mb-1">Total Shot Gun</h4>
+                            <div class="stats-figure">{{ total_shot_gun}}</div>    
+                        </div><!--//app-card-body-->
+                        <a class="app-card-link-mask" href="#"></a>
+                    </div><!--//app-card-->
+                </div><!--//col-->
+                
+                <div class="col-6 col-lg-3">
+                    <div class="app-card app-card-stat shadow-lg h-100" style="background-color: rgb(195, 255, 127);">
+                        <div class="app-card-body p-3 p-lg-4">
+                            <h4 class="stats-type mb-1">Total Rifle</h4>
+                            <div class="stats-figure">{{ total_rifle }}</div>				    
+                        </div><!--//app-card-body-->
+                        <a class="app-card-link-mask" href="#"></a>
+                    </div><!--//app-card-->
+                </div><!--//col-->
+                <div class="col-6 col-lg-3">
+                    <div class="app-card app-card-stat shadow-lg h-100" style="background-color: rgb(195, 255, 127);">
+                        <div class="app-card-body p-3 p-lg-4">
+                            <h4 class="stats-type mb-1">Total Air Gun</h4>
+                            <div class="stats-figure">{{ total_air_gun }}</div>
+                        </div><!--//app-card-body-->
+                        <a class="app-card-link-mask" href="#"></a>
+                    </div><!--//app-card-->
+                </div><!--//col-->
+                <div class="col-6 col-lg-3">
+                    <div class="app-card app-card-stat shadow-lg h-100" style="background-color: rgb(195, 255, 127);">
+                        <div class="app-card-body p-3 p-lg-4">
+                            <h4 class="stats-type mb-1">Total Grenade Launcher</h4>
+                            <div class="stats-figure">{{ total_grenade_launcher }}</div>
+                        </div><!--//app-card-body-->
+                        <a class="app-card-link-mask" href="#"></a>
+                    </div><!--//app-card-->
+                </div><!--//col-->
+                <div class="col-6 col-lg-3">
+                    <div class="app-card app-card-stat shadow-lg h-100" style="background-color: rgb(195, 255, 127);">
+                        <div class="app-card-body p-3 p-lg-4">
+                            <h4 class="stats-type mb-1">Total SMG</h4>
+                            <div class="stats-figure">{{ total_smg }}</div>
+                        </div><!--//app-card-body-->
+                        <a class="app-card-link-mask" href="#"></a>
+                    </div><!--//app-card-->
+                </div><!--//col-->
+                <div class="col-6 col-lg-3">
+                    <div class="app-card app-card-stat shadow-lg h-100" style="background-color: rgb(195, 255, 127);">
+                        <div class="app-card-body p-3 p-lg-4">
+                            <h4 class="stats-type mb-1">Total LMG</h4>
+                            <div class="stats-figure">{{ total_lmg}}</div>    
+                        </div><!--//app-card-body-->
+                        <a class="app-card-link-mask" href="#"></a>
+                    </div><!--//app-card-->
+                </div><!--//col-->
+                
+                <div class="col-6 col-lg-3">
+                    <div class="app-card app-card-stat shadow-lg h-100" style="background-color: rgb(195, 255, 127);">
+                        <div class="app-card-body p-3 p-lg-4">
+                            <h4 class="stats-type mb-1">Total Mortar</h4>
+                            <div class="stats-figure">{{ total_mortar }}</div>				    
+                        </div><!--//app-card-body-->
+                        <a class="app-card-link-mask" href="#"></a>
+                    </div><!--//app-card-->
+                </div><!--//col-->
+                <div class="col-6 col-lg-3">
+                    <div class="app-card app-card-stat shadow-lg h-100" style="background-color: rgb(195, 255, 127);">
+                        <div class="app-card-body p-3 p-lg-4">
+                            <h4 class="stats-type mb-1">Total Craft Gun</h4>
+                            <div class="stats-figure">{{ total_craft_gun }}</div>
+                        </div><!--//app-card-body-->
+                        <a class="app-card-link-mask" href="#"></a>
+                    </div><!--//app-card-->
+                </div><!--//col-->
+                <div class="col-6 col-lg-3">
+                    <div class="app-card app-card-stat shadow-lg h-100" style="background-color: rgb(195, 255, 127);">
+                        <div class="app-card-body p-3 p-lg-4">
+                            <h4 class="stats-type mb-1">Total Sniper Rifle</h4>
+                            <div class="stats-figure">{{ total_sniper_rifle }}</div>
+                        </div><!--//app-card-body-->
+                        <a class="app-card-link-mask" href="#"></a>
+                    </div><!--//app-card-->
+                </div><!--//col-->
+            </div><!--//row-->			    
+        </div><!--//container-fluid-->
+    </div><!--//app-content-->
+    
+    
+    
+</div><!--//app-wrapper-->
+
+{% endblock content %}

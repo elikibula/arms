@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="app-wrapper">	    
+    <div class="app-content pt-3 p-md-3 p-lg-4">
+        <div class="container-xl">    
+            <h3>Arm List Table</h3>
+            <table id="arm-table" class="table app-table-hover mb-0 text-left">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Rank</th>
+                        <th>Unit</th>
+                        <th>Arm Type</th>
+                        <th>Serial Number</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>  <!-- Add an empty tbody element for the table body -->
+            </table>
+        </div>
+    </div>    
+</div>
+
+<script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="//cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#arm-table').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "ajax": "{% url 'arm_list_json' %}",
+            "columns": [
+                {"data": "name"},
+                {"data": "rank"},
+                {"data": "unit"},
+                {"data": "arm_type"},
+                {"data": "serial_number"},
+                {"data": "location"}
+            ],
+            "order": [[ 0, "asc" ]],
+            "paging": true,
+            "lengthMenu": [10, 25, 50, 100],
+            "pageLength": 10,
+            "searching": true,
+            "info": true,
+            "language": {
+                "paginate": {
+                    "first": "&laquo;",
+                    "last": "&raquo;",
+                    "next": "&rarr;",
+                    "previous": "&larr;"
+                },
+                "infoEmpty": "No records available",
+                "infoFiltered": "(filtered from _MAX_ total records)"
+            }
+        });
+
+        // Add left margin to the search input
+        $('.dataTables_filter input').css('margin-left', '2rem',);
+    });
+</script>
+
+{% endblock %}
